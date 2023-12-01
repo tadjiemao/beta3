@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>beta</title>
+  <style>
+  
+    body {
+      height: 100vh;
+	  width: 100vw;
+	  display: flex;
+	  margin: 0;
+    }
+    
+    .contenedor {
+      height: 100%;
+      width: 100%;
+	  background-image: url("madrid.jpg");
+	  background-size: cover;
+   /* background-size: contain; */ /* 背景图片随着窗口大小变化而缩放，同时又不裁剪图像。图像将完整显示，但可能会在容器内留有一些空白。 */
+	  background-position: center;
+      background-repeat: no-repeat;
+	  position: relative;
+    }
+
+    .titulo {
+	  width: 100%;
+      position: absolute;
+      top: -2%;
+	  text-align: center;
+	  font-size: 68px;
+	  color: white;
+    }
+
+    .bandera {
+      position: absolute;
+	  top: 40%;
+	  animation: move_spain 8s linear infinite;
+	  opacity: 0.8; /* 设置图片透明度为 80% */
+	}
+	  
+    @keyframes move_spain {
+      0% {
+        left: -15%;
+      }
+      50% {
+        left: 50%;
+      }
+      100% {
+        left: 115%;
+      }
+    }
+	
+    .sol {
+      position: fixed;
+	  bottom: 2%;
+	}
+	
+	.base {
+      position: absolute;
+	  top: 90%;
+      right: 10%;
+	  color: white;
+	}
+	
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <div class="titulo">
+      <p>¡Hola Madrid!</p>
+    </div>
+	<div class="bandera">
+	  <img src="spain.gif" alt="spain" width="150" height="100">
+    </div> 
+	<div class="sol">
+	  <img src="sol.png" alt="sol" width="150" height="150">
+	  <div class="base">
+        <p>www.madrid.com</p>
+      </div>
+    </div> 
+  </div>
+</body>
+</html>
